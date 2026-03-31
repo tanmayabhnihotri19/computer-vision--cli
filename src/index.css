@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+}
+
+body {
+  @apply bg-zinc-950 text-zinc-300 antialiased selection:bg-emerald-500/30;
+}
+
+/* Custom scrollbar for terminal feel */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  @apply bg-zinc-800 rounded-full hover:bg-zinc-700 transition-colors;
+}
+
+/* Markdown styling for terminal output */
+.prose-sm {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.prose pre {
+  @apply bg-black/50 p-2 rounded border border-zinc-800 my-2;
+}
+
+.prose code {
+  @apply text-emerald-400 bg-emerald-500/10 px-1 rounded;
+}
